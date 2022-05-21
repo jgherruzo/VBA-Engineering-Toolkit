@@ -5,9 +5,9 @@
        //// / // :    : ---
       // /   /  /`    '--
      // /        //..\\
-   o===|========UU====UU=====-  -==========================o
-                '//||\\`
-                       DEVELOPED BY JGH
+   o===|========UU====UU=====-  -==========================o/n
+                '//||\\`/n
+                       DEVELOPED BY JGH/n
 
    -=====================|===o  o===|======================-
 # VBA-Engineering-Toolkit
@@ -15,7 +15,7 @@ VBA modules focused on engineering needs
 
 ## Codigo, General
 
-ModADOForExcel --> This module contents function and procedures for work with Excel as Database
+ModADOForExcel --> This module contents function and procedures for work with Excel as Database/n
 ModBlower --> This module contents functions and procedures for blower efficiencies Calculation
 ModConvert --> This module contents functions to work with different units
 ModEnhacements --> This module contents procedures and function in order to improve the sight
