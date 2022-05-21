@@ -1,0 +1,32 @@
+'           .---.        .-----------
+'          /     \  __  /    ------
+'         / /     \(..)/    -----
+'        //////   ' \/ `   ---
+'       //// / // :    : ---
+'      // /   /  /`    '--
+'     // /        //..\\
+'   o===|========UU====UU=====-  -==========================o
+'                '//||\\`
+'                       DEVELOPED BY JGH
+'
+'   -=====================|===o  o===|======================-
+
+Option Explicit
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+
+    If Range("R2") = 0 Then
+    Call xlStartSettings("Please, wait....")
+    Application.ScreenUpdating = False
+    Application.DisplayAlerts = False
+    
+    Call Service_Update
+    
+    Application.DisplayAlerts = True
+    Application.ScreenUpdating = False
+    
+    End If
+
+Call xlEndSettings
+
+End Sub

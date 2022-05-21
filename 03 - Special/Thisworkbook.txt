@@ -1,0 +1,42 @@
+Private Sub Workbook_BeforeClose(Cancel As Boolean)
+
+Dim ws As Worksheet
+Dim LastColumn2 As Integer
+Dim row_letter As Long
+
+Application.ScreenUpdating = False
+Application.DisplayAlerts = False
+If SheetExist(ThisWorkbook.Name, "Selection temp") = True Then
+
+Update_Components_Range
+row_letter = Range(RA_SERVICE).Row
+    
+    For Each ws In ThisWorkbook.Worksheets
+    
+        If InStr(1, ws.Name, "-NT-", vbTextCompare) <> 0 Then
+        LastColumn2 = ws.Cells(1, Cells.Columns.Count).End(xlToLeft).Column
+        ws.Activate
+        ws.Range(Cells(row_letter, 4), Cells(row_letter, LastColumn2)).Select
+
+            With Selection.Validation
+                .Delete
+                .Add Type:=xlValidateInputOnly, AlertStyle:=xlValidAlertStop, Operator _
+                :=xlBetween
+                .IgnoreBlank = True
+                .InCellDropdown = True
+                .ShowInput = True
+                .ShowError = True
+            End With
+
+        End If
+        
+    Next ws
+    
+Worksheets("Selection temp").Delete
+Worksheets("Setup").Range("R3").Value = ""
+'If Me.Saved = False Then Me.Save
+End If
+
+Application.DisplayAlerts = True
+Application.ScreenUpdating = True
+End Sub
