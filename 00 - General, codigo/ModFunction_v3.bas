@@ -19,16 +19,8 @@ Option Explicit
 ' Purpose   : This module contents function to move the mouse
 ' References: N/A
 ' Functions :
-'               1-CheckingLimit
-'               2-YesNoQuestion
-'               3-GetSmallLetterLessFirstAddDigits
-'               4-RoundUp
-'               5-RoundDown
-' Procedures:
-'               1-AddDigits
-'               2-PDFCreatorPrint
-'               3-xlWaitAMoment
-'               2-PrintWordPDFCreator
+'               1-GetWindowHandle
+' Procedures: N/A
 ' Updates   :
 '       DATE        USER    DESCRIPTION
 '       N/A
